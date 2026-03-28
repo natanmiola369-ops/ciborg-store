@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.CiborgStore" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">#6366F1</item>
+        <item name="colorPrimaryVariant">#4F46E5</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">#A855F7</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="android:statusBarColor">@color/purple_700</item>
+    </style>
+</resources>
