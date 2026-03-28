@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <androidx.cardview.widget.CardView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Novo Build"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#111"
+                    android:layout_marginBottom="12dp"/>
+
+                <EditText android:id="@+id/et_app_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Nome do App *" android:layout_marginBottom="8dp"/>
+                <EditText android:id="@+id/et_package" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Package (ex: com.meu.app)" android:layout_marginBottom="8dp"/>
+                <EditText android:id="@+id/et_version" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Versão (ex: 1.0.0)" android:layout_marginBottom="8dp"/>
+                <EditText android:id="@+id/et_developer" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Developer" android:layout_marginBottom="8dp"/>
+                <EditText android:id="@+id/et_description" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Descrição" android:minLines="2" android:layout_marginBottom="8dp"/>
+
+                <Spinner android:id="@+id/spinner_category" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp"/>
+
+                <Button
+                    android:id="@+id/btn_pick_zip"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="📦 Selecionar ZIP do Projeto"
+                    android:backgroundTint="#EEF2FF"
+                    android:textColor="#6366F1"
+                    android:layout_marginBottom="8dp"/>
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#6366F1"
+                    android:gravity="center"
+                    android:layout_marginBottom="8dp"/>
+
+                <Button
+                    android:id="@+id/btn_build"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="🚀 Compilar APK"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:backgroundTint="#6366F1"
+                    android:textColor="#FFF"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Meus Apps"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#111"
+            android:layout_marginBottom="8dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_builds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"/>
+    </LinearLayout>
+</ScrollView>
